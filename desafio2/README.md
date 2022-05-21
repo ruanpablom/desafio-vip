@@ -37,20 +37,22 @@
   escolhidas.
 - As listas a serem usadas para definir as opções devem ser as
   seguintes:
-  orgaos = [
-  {id: 1, nome: 'INSS', produtos: [1, 2, 3]},
-  {id: 2, nome: 'FGTS', produtos: [1]},
-  ]
-  produtos = [
-  {id: 1, nome: 'Novo', bancos: [1, 3]},
-  {id: 2, nome: 'Refinanciamento', bancos: [1]},
-  {id: 3, nome: 'Portabilidade', bancos: [1, 2, 3]},
-  ]
-  bancos = [
-  {id: 1, nome: 'Banco do Brasil', codigo: '001'},
-  {id: 2, nome: 'Nubank', codigo: '260'},
-  {id: 3, nome: 'C6', codigo: '336'},
-  ]
+  ```
+    orgaos = [
+      {id: 1, nome: 'INSS', produtos: [1, 2, 3]},
+      {id: 2, nome: 'FGTS', produtos: [1]},
+    ]
+    produtos = [
+      {id: 1, nome: 'Novo', bancos: [1, 3]},
+      {id: 2, nome: 'Refinanciamento', bancos: [1]},
+      {id: 3, nome: 'Portabilidade', bancos: [1, 2, 3]},
+    ]
+    bancos = [
+      {id: 1, nome: 'Banco do Brasil', codigo: '001'},
+      {id: 2, nome: 'Nubank', codigo: '260'},
+      {id: 3, nome: 'C6', codigo: '336'},
+    ]
+  ```
   Estas listas devem estar contidas em um arquivo separado do
   restante do código.
 
