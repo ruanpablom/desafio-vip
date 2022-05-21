@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+### Defina um componente react que renderize três caixas de seleção, conforme descrito:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Primeira caixa:**
 
-## Available Scripts
+- Exibir todas as opções contidas na lista "orgaos"
+- As opções devem ser listadas exibindo a propriedade
+  "nome" de cada objeto
 
-In the project directory, you can run:
+**Segunda caixa:**
 
-### `npm start`
+- Não mostrar opções enquanto não houver valor válido
+  selecionado na primeira caixa
+- Quando ocorrer seleção de algum valor na primeira caixa,
+  atualizar seus valores, exibindo as opções contidas na lista
+  "produtos", de acordo com os seguintes critérios:
+- Um produto só deve ser mostrado como uma opção caso
+  o valor da sua propriedade "id" esteja incluso na lista contida na
+  propriedade "produtos" do órgão selecionado na primeira caixa.
+- As opções devem ser listadas exibindo a propriedade
+  "nome" de cada objeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Terceira caixa:**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Não mostrar opções enquanto não houver valor válido
+  selecionado nas outras duas caixas
+- Quando ocorrer seleção de algum valor na primeira ou
+  segunda caixa, atualizar seus valores, exibindo as opções contidas
+  na lista "bancos", de acordo com os seguintes critérios:
+- Um banco só deve ser mostrado como uma opção caso o
+  valor da sua propriedade "id" esteja incluso na lista contida na
+  propriedade "bancos" do produto selecionado na segunda caixa.
+- As opções devem ser listadas exibindo as
+  propriedades "codigo" e "nome" de cada objeto, no padrão "{codigo}
+- {nome}"
+- Ao selecionar uma opção, deve ser emitido um alerta
+  identificando e exibindo o "id" de cada uma das três opções
+  escolhidas.
+- As listas a serem usadas para definir as opções devem ser as
+  seguintes:
+  orgaos = [
+  {id: 1, nome: 'INSS', produtos: [1, 2, 3]},
+  {id: 2, nome: 'FGTS', produtos: [1]},
+  ]
+  produtos = [
+  {id: 1, nome: 'Novo', bancos: [1, 3]},
+  {id: 2, nome: 'Refinanciamento', bancos: [1]},
+  {id: 3, nome: 'Portabilidade', bancos: [1, 2, 3]},
+  ]
+  bancos = [
+  {id: 1, nome: 'Banco do Brasil', codigo: '001'},
+  {id: 2, nome: 'Nubank', codigo: '260'},
+  {id: 3, nome: 'C6', codigo: '336'},
+  ]
+  Estas listas devem estar contidas em um arquivo separado do
+  restante do código.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Rodar o projeto localmente:**
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+yarn start
+```
