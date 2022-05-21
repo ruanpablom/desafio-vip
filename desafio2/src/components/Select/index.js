@@ -1,6 +1,5 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import { Container, Label, SelectStyled, Option } from './styles';
 
 export default function Select({name, disabled, handleChange, hasOptions, options, optionsFieldsToShow}) {
   const optionToShow = (option) => {
@@ -16,16 +15,16 @@ export default function Select({name, disabled, handleChange, hasOptions, option
   }
 
   return (
-    <>
-      <label htmlFor="bancos">{name}</label>
-      <select disabled={disabled} name={name.toLowerCase()} id={name.toLowerCase()} onChange={e => handleChange(e.target.value === "false" ? false : e.target.value)}>
-      <option selected value="false">Selecione</option>
+    <Container>
+      <Label htmlFor="bancos">{name}</Label>
+      <SelectStyled disabled={disabled} name={name.toLowerCase()} id={name.toLowerCase()} onChange={e => handleChange(e.target.value === "false" ? false : e.target.value)}>
+      <Option selected value="false">Selecione</Option>
         { hasOptions &&
             options.map(option => (
-              <option key={option.id} value={option.id}>{optionToShow(option)}</option>
+              <Option key={option.id} value={option.id}>{optionToShow(option)}</Option>
             ))
         }
-      </select>
-    </>
+      </SelectStyled>
+    </Container>
   );
 }
